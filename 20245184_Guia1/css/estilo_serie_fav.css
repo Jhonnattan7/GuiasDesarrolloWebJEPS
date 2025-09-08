@@ -85,7 +85,7 @@
     display: block;
     width: 80px;
     height: 3px;
-    background: linear-gradient(90deg, #aaa, #fff, #aaa);
+    background: #111;
     margin: 10px auto 0;
     border-radius: 2px;
  }
