@@ -1,68 +1,86 @@
-* {
+ /* Estilo de la pagina de huesos o bones en ingles   */
+
+ * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+ }
 
-/* Header */
-header {
+ /* Header */
+ header {
     background-color: #111;
-    /* negro elegante */
     padding: 20px 0;
     text-align: center;
-}
+ }
 
-/* Título principal */
-header h1 {
+ /* Título principal */
+ header h1 {
     font-size: 2.5rem;
     color: #ffffff;
-    /* plateado */
     text-transform: uppercase;
     letter-spacing: 3px;
     margin-bottom: 15px;
-}
+ }
 
-/* Estilo general */
-body {
+ header nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+ }
+
+ header nav a:hover {
+     color: #c0c0c0;
+     /* plateado al pasar */
+ }
+
+
+ /* Estilo general */
+ body {
     font-family: "Arial", sans-serif;
     margin: 0;
     padding: 0;
     background-color: #fff;
     /* Fondo blanco */
-    color: #222;
+    color: #000000;
     /* Texto oscuro */
-}
+ }
 
-/* Contenedor general */
-section {
+ /* Contenedor general */
+ section {
     padding: 40px 20px;
     max-width: 1200px;
     margin: auto;
-}
+ }
 
-section p {
+ p, section p {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 1.3rem;
     padding: 7.5px 2.5px;
     max-width: 1000px;
     margin: auto;
-}
+    text-align: justify;
+ }
 
-/* Títulos */
-section h2 {
+
+ /* Títulos */
+ section h2 {
     text-align: center;
     margin-bottom: 40px;
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     color: #000000;
     letter-spacing: 1px;
     text-transform: uppercase;
     position: relative;
-}
+ }
 
-section div h3 {
+ section div h3 {
     text-align: center;
     padding: 1%;
-}
+ }
 
-section h2::after {
+ section h2::after {
     content: "";
     display: block;
     width: 80px;
@@ -70,17 +88,17 @@ section h2::after {
     background: linear-gradient(90deg, #aaa, #fff, #aaa);
     margin: 10px auto 0;
     border-radius: 2px;
-}
+ }
 
-/* Grid para temporadas o cast */
-.grid-container {
+ /* Grid para temporadas o cast */
+ .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 25px;
-}
+ }
 
-/* Tarjetas */
-.card {
+ /* Tarjetas */
+ .card {
     background: #444;
     /* Gris oscuro para tarjetas */
     border-radius: 15px;
@@ -89,26 +107,17 @@ section h2::after {
     text-align: center;
     color: #fff;
     /* Texto blanco para contraste */
-}
+ }
 
-.card p {
+ .card p {
     font-size: 1rem;
     line-height: 1.5;
     color: #fff;
-}
+ }
 
-section h2::after {
-    content: "";
-    display: block;
-    width: 80px;
-    height: 3px;
-    background: #111;
-    margin: 10px auto 0;
-    border-radius: 2px;
-}
 
-/* Imagen principal de la viñeta */
-section>img {
+ /* Imagen principal de la viñeta */
+ section>img {
     display: block;
     max-width: 800px;
     width: 100%;
@@ -117,50 +126,41 @@ section>img {
     margin: 30px auto 10px auto;
     border-radius: 16px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
-}
+ }
 
-/* Imágenes en tarjetas */
-.card img {
+ section>section>img {
+    display: block;
+    max-width: 1500px;
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    margin: 30px auto 10px auto;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+ }
+
+ /* Imágenes en tarjetas */
+ .card img {
     width: 100%;
     height: 180px;
     object-fit: cover;
     border-radius: 12px;
     margin-bottom: 15px;
     border: 2px solid #444;
-}
+ }
 
-/* Títulos dentro de tarjetas */
-.card h3 {
+ /* Títulos dentro de tarjetas */
+ .card h3 {
     margin: 10px 0;
     font-size: 1.3rem;
     color: #fff;
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
-}
 
-/* Texto */
-.card p {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #fff;
-}
+ }
 
-
-section h2 {
-    font-size: 1.6rem;
-}
-
-.card h3 {
-    font-size: 1.1rem;
-}
-
-
-p {
-    text-align: justify;
-}
-
-footer p {
+ footer p {
     background-color: #111;
     color: white;
     text-align: center;
     padding: 3%;
-}
+ }
