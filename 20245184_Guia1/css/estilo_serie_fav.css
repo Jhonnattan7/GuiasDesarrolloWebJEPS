@@ -34,6 +34,11 @@ section {
   max-width: 1200px;
   margin: auto;
 }
+section p {
+  padding: 7.5px 2.5px;
+  max-width: 1000px;
+  margin: auto;
+}
 
 /* Títulos */
 section h2 {
@@ -145,6 +150,9 @@ p{
     text-align: justify;
 }
 
-footer{
+footer p{
+    background-color: #111;
+    color:white;
     text-align: center;
+    padding: 3%;
 }
