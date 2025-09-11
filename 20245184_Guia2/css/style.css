@@ -72,3 +72,21 @@ nav span a{
 nav span a:hover{
     background-color: #b2dfdb;
 }
+
+nav span a[href="http://www.sensacine.com/peliculas/pelicula-175305/reparto"] {
+    background-color: #9e9e9e;
+}
+
+
+section article p::first-letter{
+    font-size: 1.5rem;
+    color: gold;
+}
+
+section article:first-child p::first-line{
+    text-decoration: underline;   
+}
+
+
+
+
