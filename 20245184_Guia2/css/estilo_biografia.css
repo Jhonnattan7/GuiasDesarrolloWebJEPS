@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #101010;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.contenido-header h1 {
+    font-size: 2rem;
+}
+
+.subtitulo {
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.navegacion-principal ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.navegacion-principal a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navegacion-principal a:hover {
+    text-decoration: underline;
+}
+
+.seccion-sobre-mi {
+    padding: 20px;
+}
+
+.seccion-sobre-mi h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.seccion-sobre-mi hr {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+}
+
+.seccion-sobre-mi .contenido-sobre-mi {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.imagen-personal {
+    width: 200px;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.texto-sobre-mi {
+    flex: 1;
+}
+
+.texto-sobre-mi h3 {
+    margin-bottom: 10px;
+}
+
+.texto-sobre-mi p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.seccion-sobre-mi .contenido-sobre-mi {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.imagen-personal {
+    width: 200px;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.texto-sobre-mi {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.seccion-habilidades {
+    padding: 20px;
+}
+
+.seccion-habilidades h2 {
+    text-align: center;
+}
+
+#habilidades {
+    background-color: rgb(31, 31, 31);
+    color: whitesmoke;
+}
+
+.habilidades-contenedor {
+    background-color: rgb(30, 30, 30);
+    color: rgb(255, 255, 255);
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.habilidades-columna {
+    flex: 1;
+    min-width: 250px;
+}
+
+.habilidades-columna h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    /* Tamaño de fuente más grande para los títulos de columna */
+}
+
+.lista-habilidades {
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.lista-habilidades h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-bottom: 2px solid #ddd;
+    /* Línea separadora para los subtítulos */
+    padding-bottom: 5px;
+}
+
+.lista-habilidades ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.lista-habilidades li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+
+.seccion-educacion {
+    padding: 20px;
+}
+
+.seccion-educacion h2 {
+    text-align: left; /* Alinea el título a la izquierda */
+    margin-bottom: 20px;
+}
+
+.seccion-educacion hr {
+    margin: 0 0 40px; /* Alinea la línea horizontal a la izquierda */
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.lista-educacion {
+    max-width: 800px;
+    margin-left: 0; /* Asegura que el contenedor se alinee a la izquierda */
+}
+
+.lista-educacion ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.lista-educacion li {
+    text-align: left; /* Alinea el texto de cada elemento a la izquierda */
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.seccion-contacto {
+    padding: 20px;
+    background-color: rgb(30, 30, 30);
+    color: white;
+}
+
+.seccion-contacto h2 {
+    text-align: left; 
+    margin-bottom: 20px;
+}
+
+.seccion-contacto hr {
+    width: 100%;
+    margin: 0 0 40px 0; 
+    border: 1px solid #ccc;
+}
+
+.seccion-contacto ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.seccion-contacto li {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
