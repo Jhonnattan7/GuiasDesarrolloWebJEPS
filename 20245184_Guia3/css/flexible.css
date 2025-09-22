@@ -5,6 +5,7 @@
     font-family: 'Didact Gothic', sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /*Estilos iniciales*/
@@ -23,44 +24,56 @@ h1 {
 /* PARTE SUPERIOR */
 #superior {
     width: 100%;
-    padding: 30px 0px;
+    padding: 2% 0px;
     background-color: #464d52;
 }
 
 #encabezado {
     margin: 0px auto;
-    width: 960px;
+    width: 80%;
+    min-width: 650px; 
+    max-width: 960px; 
 }
 
 #descripcion {
-    width: 360px;
-    height: 360px;
+    width: 37.5%;
+    height: auto;
     background-color: #888;
     float: left;
 }
 
 #descripcion p {
-    margin: 20px;
+    margin: 5%;
     color: white;
     font-weight: bold;
     line-height: 180%;
     text-align: justify;
 }
 
+#superior #encabezado #logo {
+    margin: 2% 0px; 
+    width: 21%;     
+}
+
 #imgDesc {
     overflow: hidden;
+    
 }
 
 #imgDesc img {
     float: left;
-
+    width: 62.5%;  
+    height: auto;
+    
 }
 
-/*Contenido principal de las páginas*/
+/*Contenido principal de las paginas*/
 #contenido {
-    width: 960px;
+    width: 80%;
     margin: 0px auto;
     clear: left;
+    min-width: 650px; 
+    max-width: 960px; 
 }
 
 /* PIE DE LA PAGINA*/
@@ -78,15 +91,22 @@ footer {
 /*CONTENIDO DE LA PALABRA INDEX*/
 
 .plan {
-    width: 258px;
-    padding: 20px;
+    width: 26.7%;   
+    padding: 2%;   
     background-color: white;
-    margin: 30px 15px;
+    margin: 30px 1.5%;
     border: solid 1px black;
     border-radius: 10px;
-    float: left;
     text-align: justify;
+    float: left;
+
 }
+
+.plan img {
+    width: 100%;
+    height: auto;
+}
+
 
 #contenido div:nth-child(3n+1){
     margin-left: 0px;
@@ -123,10 +143,15 @@ footer {
 /* Contenido de la pagina planes*/
 
 .planes{
-    width: 900px;
+    width: 94%;
     background: white;
-    padding: 10px 30px;
+    padding: 1% 3%;
 }
+.planes img {
+    width: 100%;
+    border-radius: 15px;
+}
+
 
 .planes h1{
     text-align: left;
@@ -148,6 +173,14 @@ footer {
 
 #galeria .plan{
     font-size: 1em;
-    margin-bottom: 10px;
     padding-bottom: 1px;
+    margin: 30px 1.4% 10px; 
+    display: inline-block; 
+    width: 30%;
+    float: none;         
+    vertical-align: top;  
+    float: none;
+}
+#galeria {
+    text-align: center;
 }

@@ -8,17 +8,29 @@
 body {
     font-family: 'Muli', sans-serif;
     text-align: justify;
+    padding-top: 130px;
+    padding-bottom: 80px;
 }
 
 header {
     background: #16A085;
     height: 130px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    left: 0;
 }
 
 footer {
+    text-align: center;
     height: 50px;
     background-color: #16A085;
-    margin-top: 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    bottom: 0;
+    left: 0;
 
 }
 
@@ -32,10 +44,12 @@ h1 {
     font-size: 2.3rem;
     margin-bottom: 1rem;
     padding-top: 0.5rem;
+    text-align: center;
 }
 
 h2 {
     font-size: 2rem;
+    text-align: center;
 }
 
 section {
@@ -43,7 +57,9 @@ section {
     width: 90%;
     overflow: hidden;
     display: flex;
-    
+    flex-wrap: wrap;
+    justify-content: center;
+
 }
 
 section article {
@@ -54,7 +70,8 @@ section article {
     border: 2px dashed #16A085;
     padding: 1%;
     box-sizing: border-box;
-    
+    float: left;
+
 }
 
 section article img {
@@ -64,13 +81,43 @@ section article img {
     display: block;
 }
 
-footer div{
+footer div {
     padding-top: 1rem;
 }
 
-section article:nth-child(2){
-    background-color: rgba(70, 103, 180, 0.9);
+section article:nth-child(2) {
+    background-color: rgba(70, 130, 180, 0.9);
     position: relative;
-    left: 100px;
-    top: 50px;
+
 }
+
+/*¿Esperaba que el artículo se moviera 100 pixeles a la izquierda y 50 pixeles hacia arriba? ¿Es eso 
+lo que obtuvo? Pregúntese porque el artículo se movió hacia abajo y hacia la derecha con 
+respecto a su posición original. Asegúrese de entender este comportamiento antes de seguir 
+con la guía. */
+/*Sinceramente no lo esperaba se movio todo lo contrario, esperaba que se moviera hacia la izquierda y arriba,pero se movió hacia la derecha y abajo.*/
+
+
+/* ¿Qué ha pasado con las otras cajas? ¿Han tomado el espacio que dejo libre el segundo artículo? 
+¿Por qué? */
+
+/*Y bueno las otras cajas no han ocupado el espacio del segundo articulo o pelicula mas bien parecian desocnectadas 
+de este osea no lo tomaban encuenta. En clases menciono Guillermo que esto ocurre porque
+position: relative mantiene el espacio original del elemento en el flujo del documento. 
+El elemento se desplaza visualmente pero conserva su lugar reservado en el layout.*/
+
+
+
+/* ¿Qué ha pasado con las otras cajas? ¿Han ocupado el espacio que dejo disponible el segundo 
+artículo? A partir del comportamiento visto, explique ¿Cuáles son las diferencias entre el 
+posicionamiento relativo y absoluto? */
+/* Principales difernecias:
+- position: relative: Se mueve respecto a su posicion original, ademas, mantiene su espacio en el flujo o distribucion de las demas pelicula en este caso
+- position: absolute: Se mueve respecto al contenedor padre posicionado, sale del flujo normal y queda fijo en un punto
+y las otras cajas si ocuparían su espacio original */
+
+
+/* ¿Cuál es la diferencia entre ocultar los elementos 
+ocupando display: none y visibility: hidden?*/
+/* las principales dueron el tema del -display: none, ya que este elemento desaparece y no ocupa espacio en la distribucion
+otra fue el visibility: hidden ya que al olcultar el elemento osea la pelicula ya no se muestra pero sigue ocupando espacio en la distribucin */

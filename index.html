@@ -1,28 +1,75 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indice de las guias</title>
+    <title>Índice de Guías - Desarrollo Web</title>
+    <!-- Enlazamos el nuevo archivo CSS -->
+    <link rel="stylesheet" href="estilo_indice.css">
+    <!-- Opcional: Importar una fuente para un mejor look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilo_indice.css">
 </head>
+
 <body>
-    <header>
-        <h1>Guías de Jhonnatan Peñate</h1>
-        <h2>Guía 1</h2>
+    <header class="header_main">
+        <h1>Portafolio de Guías</h1>
+        <p>Jhonnatan Ezequiel Peñate Serrano - Desarrollo Web 1</p>
     </header>
-    <main>
-        <ul>
-            <li><a href="20245184_Guia1/bones.html">Bones - Serie Forense</a></li>
-            <li><a href="20245184_Guia1/estilos_embebidos.html">Estilos Embebidos</a></li>
-            <li><a href="20245184_Guia1/ejemplo2.html">Ejemplo 2</a></li>
-            <li><a href="20245184_Guia1/paises.html">Paises</a></li>
-        </ul>
-        <h2>Guía 2</h2>
-        <ul>
-            <li><a href="20245184_Guia2/mi_biografia.html">Mi Biografía</a></li>
-            <li><a href="20245184_Guia2/pelicula.html">Película</a></li>
-            <li><a href="20245184_Guia2/tablero.html">Tablero</a></li>
-        </ul>
-    </main>
+
+    <div class="contenedor_general">
+        <main>
+            <section id="intro" class="seccion_intro">
+                <h2>Introducción al Portafolio</h2>
+                <p>Este portafolio recopila los trabajos prácticos realizados en la materia de Desarrollo Web 1 2025,
+                    demostrando la práctica, mejora del uso de tecnologías como HTML5 y CSS3 para la creación de sitios
+                    web.Además, conforme aumente el conocimiento asi es la calidad de cada guia.</p>
+                <p class="nota"><b>NOTA:</b> De click a cada nombre del ejercicio para poder accceder.</p>
+            </section>
+
+            <section id="guias" class="seccion_guias">
+                <h2>Guías Prácticas</h2>
+                <div class="contenedor_guias">
+                    <!-- Guía 1 -->
+                    <div class="guia">
+                        <h3>Guía 1: Fundamentos de HTML y CSS</h3>
+                        <ul>
+                            <li><a href="20245184_Guia1/bones.html">Bones - Serie Forense</a></li>
+                            <li><a href="20245184_Guia1/estilos_embebidos.html">Estilos Embebidos</a></li>
+                            <li><a href="20245184_Guia1/ejemplo2.html">Ejemplo 2</a></li>
+                            <li><a href="20245184_Guia1/paises.html">Países</a></li>
+                        </ul>
+                    </div>
+                    <!-- Guía 2 -->
+                    <div class="guia">
+                        <h3>Guía 2: Estructura y Multimedia</h3>
+                        <ul>
+                            <li><a href="20245184_Guia2/mi_biografia.html">Mi Biografía</a></li>
+                            <li><a href="20245184_Guia2/pelicula.html">Película</a></li>
+                            <li><a href="20245184_Guia2/tablero.html">Tablero</a></li>
+                        </ul>
+                    </div>
+                    <!-- Guía 3 -->
+                    <div class="guia">
+                        <h3>Guía 3: Posicionamiento y CSS Avanzado</h3>
+                        <ul>
+                            <li><a href="20245184_Guia3/oscares.html">Posicionamiento Fijo (Oscares)</a></li>
+                            <li><a href="20245184_Guia3/menu_horizontal.html">Menú Horizontal</a></li>
+                            <li><a href="20245184_Guia3/index.html">Agencia de Viajes</a></li>
+                            <li><a href="20245184_Guia3/analisis.html">Análisis Z-Index (Cartas)</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Jhonnatan Peñate. Todos los derechos reservados.</p>
+    </footer>
 </body>
+
 </html>

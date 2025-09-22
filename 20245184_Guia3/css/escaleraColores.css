@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+
+}
+
+.contenedor {
+    width: 85%;
+    margin: 40px auto;
+    border-radius: 30px;
+    border: 12px solid #3b2511;
+    /* borde tipo madera */
+    background: linear-gradient(135deg, #228B22 60%, #145214 100%);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    color: whitesmoke;
+    padding: 50px 0px 150px;
+
+}
+
+h1 {
+    margin-bottom: 40px;
+}
+
+section {
+
+    display: inline-block;
+    width: 45%;
+    vertical-align: top;
+    position: relative;
+    height: 300px;
+    /* espacio para apilar las cartas */
+}
+
+section div {
+    position: absolute;
+}
+
+section img {
+    width: 100px;
+    border: 0.1px solid black;
+}
+
+/* Resultado 1 */
+.resultado1 #diez_de_diamantes {
+    top: 150px;
+    left: 200px;
+    z-index: 1;
+}
+
+.resultado1 #sota_de_diamantes {
+    top: 170px;
+    left: 220px;
+    z-index: 2;
+}
+
+.resultado1 #reina_de_diamantes {
+    top: 190px;
+    left: 240px;
+    z-index: 3;
+}
+
+.resultado1 #rey_de_diamantes {
+    top: 210px;
+    left: 260px;
+    z-index: 4;
+}
+
+.resultado1 #as_de_diamantes {
+    top: 230px;
+    left: 280px;
+    z-index: 5;
+    /* El As queda arriba */
+}
+
+/* Resultado 2 */
+.resultado2 #diez_de_diamantes {
+    top: 150px;
+    left: 200px;
+    z-index: 5;
+    /* El 10 queda arriba */
+}
+
+.resultado2 #sota_de_diamantes {
+    top: 170px;
+    left: 220px;
+    z-index: 4;
+}
+
+.resultado2 #reina_de_diamantes {
+    top: 190px;
+    left: 240px;
+    z-index: 3;
+}
+
+.resultado2 #rey_de_diamantes {
+    top: 210px;
+    left: 260px;
+    z-index: 2;
+}
+
+.resultado2 #as_de_diamantes {
+    top: 230px;
+    left: 280px;
+    z-index: 1;
+    /* El As queda abajo */
+}
