@@ -1,107 +1,388 @@
 /* Estilos Generales */
-*{
+
+* {
+    box-sizing: border-box;
     margin: 0;
-    padding: 0;
+    padding: 0
 }
+
+html,
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin: 0;
-    background-color: #f4f7f6;
-    color: #333;
-    line-height: 1.6;
+    height: 100%;
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+    background: #f3f4f6;
+    color: #11224E
 }
 
-.contenedor_general {
-    width: 90%;
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
+.contenedor {
+    max-width: 1100px;
+    margin: 24px auto;
+    padding: 0 18px
 }
 
-/* Header y Footer */
-.header_main {
-    background-color: #2c3e50;
-    color: #ecf0f1;
-    padding: 20px 0;
-    text-align: center;
-    border-bottom: 4px solid #3498db;
+header.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 18px;
+    border-radius: 10px 10px 0 0;
+    background: #11224E;
+    color: #EEEEEE;
+    box-shadow: 0 8px 30px rgba(17, 34, 78, 0.12)
 }
 
-.header_main h1 {
-    margin: 0;
-    font-size: 2.5rem;
+.marca {
+    font-weight: 900;
+    font-size: 1.2rem;
+    color: #EEEEEE
 }
 
-.header_main p {
-    margin: 5px 0 0;
-    font-size: 1.1rem;
-    opacity: 0.9;
+nav.navegacion ul {
+    display: flex;
+    gap: 18px;
+    list-style: none
 }
 
-.footer {
-    background-color: #2c3e50;
-    color: #ecf0f1;
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 40px;
+nav.navegacion a {
+    color: #EEEEEE;
+    font-weight: 700;
+    padding: 8px 10px;
+    border-radius: 8px
 }
 
-/* Secciones */
-.seccion_intro, .seccion_guias {
-    background-color: #ffffff;
-    padding: 25px;
-    margin-bottom: 30px;
-    border-radius: 8px;
+nav.navegacion a:hover {
+    background: rgba(255, 255, 255, 0.04)
 }
-.seccion_intro p.nota {
+
+/* Contenedor principal con margen superior para separarlo del header */
+main.principal {
+    background: linear-gradient(180deg, #fff, #fbfbfd);
+    border-radius: 0 0 12px 12px;
+    padding: 22px;
+    border: 1px solid rgba(17, 34, 78, 0.04);
+    box-shadow: 0 10px 40px rgba(2, 6, 23, 0.04)
+}
+
+/* Area superior: tarjeta + biografía */
+.area-superior {
+    display: flex;
+    gap: 22px;
+    align-items: flex-start
+}
+
+.tarjeta {
+    width: 320px;
+    border-radius: 16px;
+    background: linear-gradient(180deg, #11224E, #1b2b6a);
+    color: #EEEEEE;
+    padding: 12px;
+    box-shadow: 0 14px 40px rgba(17, 34, 78, 0.12);
+    border: 3px solid rgba(248, 123, 27, 0.06);
+    transition: transform .28s
+}
+
+.tarjeta:hover {
+    transform: translateY(-6px)
+}
+
+.tarjeta img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    border: 6px solid rgba(255, 255, 255, 0.06)
+}
+
+.tarjeta .nombre {
     margin-top: 10px;
-    color: rgb(213, 19, 19);
-
+    font-weight: 900;
+    color: #CBD99B;
+    text-align: center
 }
 
-h2 {
-    color: #3498db;
-    border-bottom: 2px solid #ecf0f1;
-    padding-bottom: 10px;
-    margin-top: 0;
+.tarjeta .cargo {
+    text-align: center;
+    color: #EEEEEE;
+    margin-top: 6px
 }
 
-/* Contenedor de las guías */
-.contenedor_guias {
+.tarjeta .carnet {
+    text-align: center;
+    color: #F87B1B;
+    margin-top: 8px;
+    font-weight: 800
+}
+
+.biografia {
+    flex: 1;
+    background: #EEEEEE;
+    border-radius: 12px;
+    padding: 18px;
+    border: 1px solid rgba(17, 34, 78, 0.04)
+}
+
+.biografia h2 {
+    color: #11224E;
+    margin-bottom: 10px
+}
+
+.biografia p {
+    color: #334155;
+    line-height: 1.6
+}
+
+.area-inferior {
     display: grid;
-    gap: 20px;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 18px
 }
 
-/* Tarjeta para cada guía */
-.guia {
-    background-color: #f9f9f9;
-    border: 1px solid #e0e0e0;
+.tarjeta-grande {
+    display: flex;
+    gap: 18px;
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 16px;
+    border: 1px solid rgba(17, 34, 78, 0.06);
+    box-shadow: 0 10px 30px rgba(17, 34, 78, 0.04);
+    align-items: flex-start
+}
+
+.curso {
+    flex: 1
+}
+
+.curso h3 {
+    color: #11224E;
+    margin-bottom: 8px
+}
+
+.curso p {
+    color: #334155;
+    line-height: 1.5
+}
+
+.contenedor-guias {
+    width: 320px
+}
+
+.guia-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px dashed rgba(17, 34, 78, 0.04)
+}
+
+.guia-item:last-child {
+    border-bottom: none
+}
+
+.guia-desc {
+    margin: 8px 0 12px;
+    color: #475569; /* gris-azulado */
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.btn-enlace {
+    background: #F87B1B;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 10px;
+    font-weight: 800;
+    text-decoration: none
+}
+
+.bloque-foda {
+    margin-top: 22px;
+    border-radius: 12px;
+    padding: 18px;
+    background: linear-gradient(180deg, #CBD99B, #c6d78a);
+    box-shadow: 0 10px 30px rgba(17, 34, 78, 0.06);
+    border: 1px solid rgba(17, 34, 78, 0.04)
+}
+
+.bloque-foda h2 {
+    color: #11224E;
+    margin-bottom: 10px
+}
+
+.foda-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px
+}
+
+.foda-item {
+    background: rgba(255, 255, 255, 0.92);
+    padding: 10px;
     border-radius: 8px;
-    padding: 20px;
+    border: 1px solid rgba(17, 34, 78, 0.04);
+    color: #11224E;
+    box-shadow: 0 6px 18px rgba(17, 34, 78, 0.04)
 }
 
-
-.guia h3 {
-    margin-top: 0;
-    color: #2980b9;
+.foda-item h4 {
+    margin-bottom: 6px
 }
 
-/* Lista de enlaces */
-.guia ul {
-    list-style: none;
-    padding: 0;
+.foda-item p {
+    color: #123
 }
 
-.guia ul li {
-    margin-bottom: 10px;
+.contenedor-guias,
+.guia {
+    box-sizing: border-box;
 }
 
-.guia ul a {
+.guia {
+    background: #ffffff;
+    border: 1px solid rgba(17, 34, 78, 0.06);
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.seccion_guias {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 18px;
+    margin-top: 12px;
+    border: 1px solid rgba(17, 34, 78, 0.04);
+    box-shadow: 0 10px 30px rgba(17, 34, 78, 0.04);
+}
+
+.seccion_guias h2 {
+    color: #11224E;
+    margin-bottom: 8px;
+}
+
+.seccion_guias .seccion-desc {
+    color: #334155;
+    margin-bottom: 14px;
+    line-height: 1.5;
+}
+
+.seccion_guias .contenedor-guias {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 12px;
+}
+
+.seccion_guias .guia h3 {
+    color: #11224E;
+    margin-bottom: 8px;
+}
+
+.seccion_guias .guia a {
+    color: #F87B1B;
+    font-weight: 700;
     text-decoration: none;
-    color: #34495e;
-    font-weight: 500;
 }
 
-.guia ul a:hover {
-    color: #3498db;
+.seccion_guias .guia a:hover {
+    text-decoration: underline;
+}
+
+.seccion_guias .guia ul {
+    margin-left: 18px;
+    margin-top: 6px;
+}
+
+.contenedor-guias h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+@media screen and (max-width: 768px) {
+    .area-superior {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .tarjeta {
+        width: 100%;
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
+    .tarjeta img {
+        height: auto;
+        max-width: 100%;
+    }
+
+    nav.navegacion ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .contenedor-guias {
+        width: 100% !important;
+        max-width: 100%;
+    }
+    .tarjeta-grande {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .foda-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav.navegacion ul {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 6px;
+    }
+
+    nav.navegacion a {
+        display: block;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .contenedor {
+        padding: 0 12px;
+        margin: 12px auto;
+    }
+
+    .biografia p {
+        font-size: 0.95rem;
+    }
+
+    .seccion_guias .guia h3 {
+        font-size: 1rem;
+    }
+    .seccion_guias .guia ul {
+        margin-left: 14px;
+        font-size: 0.95rem;
+    }
+    .foda-item {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+}
+
+footer.pie {
+    margin-top: 18px;
+    padding: 14px;
+    border-radius: 0 0 10px 10px;
+    background: var(--azul);
+    color: var(--gris);
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(17, 34, 78, 0.08)
+}
+
+h2,
+h3,
+h4 {
+    font-weight: 800
+}
+
+.muted {
+    color: #6b7280
 }
