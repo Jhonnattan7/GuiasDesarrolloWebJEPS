@@ -22,36 +22,41 @@ body {
 
 header.encabezado {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 14px 18px;
     border-radius: 10px 10px 0 0;
     background: #11224E;
     color: #EEEEEE;
-    box-shadow: 0 8px 30px rgba(17, 34, 78, 0.12)
+    box-shadow: 0 8px 30px rgba(17, 34, 78, 0.12);
 }
 
 .marca {
     font-weight: 900;
     font-size: 1.2rem;
-    color: #EEEEEE
+    color: #EEEEEE;
+}
+nav.navegacion{
+    margin: 0 auto;
 }
 
 nav.navegacion ul {
     display: flex;
     gap: 18px;
-    list-style: none
+    list-style: none;
+    justify-content: center;
 }
 
 nav.navegacion a {
     color: #EEEEEE;
     font-weight: 700;
     padding: 8px 10px;
-    border-radius: 8px
+    border-radius: 8px;
+    text-decoration: none;
 }
 
 nav.navegacion a:hover {
-    background: rgba(255, 255, 255, 0.04)
+    background: rgba(255, 255, 255, 0.04);
 }
 
 /* Contenedor principal con margen superior para separarlo del header */
@@ -147,6 +152,45 @@ main.principal {
     box-shadow: 0 10px 30px rgba(17, 34, 78, 0.04);
     align-items: flex-start
 }
+
+.temario {
+    background: #ffffff;
+    border: 1px solid rgba(17, 34, 78, 0.04);
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 8px 24px rgba(17, 34, 78, 0.04);
+    margin-top: 12px;
+}
+
+.temario h3 {
+    color: #11224E;
+    margin-bottom: 10px;
+    font-size: 1.05rem;
+}
+
+.temario .unidad {
+    margin-bottom: 12px;
+    padding: 10px;
+    border-radius: 8px;
+    background: linear-gradient(180deg, rgba(248,123,27,0.03), rgba(17,34,78,0.01));
+    border: 1px solid rgba(17, 34, 78, 0.03);
+}
+
+.temario .unidad h4 {
+    margin-bottom: 6px;
+    color: #11224E;
+    font-size: 0.98rem;
+    font-weight: 800;
+}
+
+.temario .unidad ul {
+    margin-left: 18px;
+    color: #334155;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+
 
 .curso {
     flex: 1
@@ -295,6 +339,8 @@ main.principal {
     margin-bottom: 8px;
 }
 
+
+
 @media screen and (max-width: 768px) {
     .area-superior {
         flex-direction: column;
@@ -329,6 +375,13 @@ main.principal {
     .foda-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 12px;
+    }
+
+     .temario {
+        padding: 12px;
+    }
+    .temario .unidad {
+        padding: 8px;
     }
 }
 
