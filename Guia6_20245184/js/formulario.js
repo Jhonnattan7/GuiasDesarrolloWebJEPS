@@ -104,10 +104,10 @@ function imprimirFilas() {
             <td>${element[4]}</td>
             <td>${element[5]}</td>
             <td>
-                <button id="idBtnEditar${contador}" type="button" class="btn btn-primary" alt="Eliminar">
+                <button onclick="editarPaciente(${contador - 1})" type="button" class="btn btn-primary" alt="Editar">
                     <i class="bi bi-pencil-square"></i>
                 </button>
-                <button id="idBtnEliminar${contador}" type="button" class="btn btn-danger" alt="Editar">
+                <button onclick="eliminarPaciente(${contador - 1})" type="button" class="btn btn-danger" alt="Eliminar">
                     <i class="bi bi-trash3-fill"></i>
                 </button>
             </td>
@@ -165,6 +165,70 @@ const addPais = () => {
         // Llamando al componente de Bootstrap
         toast.show();
     }
+};
+
+/*
+Función para eliminar un paciente del arreglo
+Recibe el índice del paciente en el arreglo
+*/
+const eliminarPaciente = (index) => {
+    // Confirmación antes de eliminar
+    if (confirm("¿Está seguro de eliminar este paciente?")) {
+        // Eliminar el elemento del arreglo en la posición index
+        arrayPaciente.splice(index, 1);
+        
+        // Actualizar la tabla
+        imprimirPacientes();
+        
+        // Mostrar notificación
+        mensaje.innerHTML = "Paciente eliminado correctamente";
+        toast.show();
+    }
+};
+
+/*
+Función para editar un paciente
+Carga los datos del paciente seleccionado en el formulario
+*/
+const editarPaciente = (index) => {
+    // Obtener los datos del paciente
+    let paciente = arrayPaciente[index];
+    
+    // Cargar los datos en el formulario
+    inputNombre.value = paciente[0];
+    inputApellido.value = paciente[1];
+    inputFechaNacimiento.value = paciente[2];
+    
+    // Seleccionar el sexo correspondiente
+    if (paciente[3] === "Hombre") {
+        inputRdMasculino.checked = true;
+    } else if (paciente[3] === "Mujer") {
+        inputRdFemenino.checked = true;
+    }
+    
+    // Seleccionar el país correspondiente
+    // Buscar el valor del país por su texto
+    for (let i = 0; i < cmbPais.options.length; i++) {
+        if (cmbPais.options[i].text === paciente[4]) {
+            cmbPais.value = cmbPais.options[i].value;
+            break;
+        }
+    }
+    
+    inputDireccion.value = paciente[5];
+    
+    // Eliminar el paciente antiguo del arreglo
+    arrayPaciente.splice(index, 1);
+    
+    // Actualizar la tabla
+    imprimirPacientes();
+    
+    // Mostrar notificación
+    mensaje.innerHTML = "Edite los datos y presione 'Guardar Datos'";
+    toast.show();
+    
+    // Hacer scroll hacia el formulario
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
 // Agregando eventos a los botones y utilizando funciones tipo flecha
